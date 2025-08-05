@@ -5,7 +5,10 @@
 }
 
 :root {
-    --uri-gray: hsla(235, 0%, 50%, 0.27);
+  --uri-trans-white: #f2f5f9;
+  --uri-trans-dk: #111729;
+  --uri-gray: #4a5567;
+  --uri-avg-fsz: 16px;
 }
 
 body {
@@ -15,14 +18,19 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: var(--uri-trans-white);
 }
 
 .container {
     width: 280px;
     height: 440px;
     border-radius: 1rem;
-    border: 1px solid;
     position: relative;
+    background-color: #fff;
+}
+
+h2, h3 {
+  color: var(--uri-trans-dk);
 }
 
 .hero-imgs {
@@ -51,12 +59,30 @@ body {
     margin-inline: 0.8rem;
 }
 
+.blog-para {
+  font-size: var(--uri-avg-fsz);
+  margin-top: 2ch;
+  color: var(--uri-gray);
+}
+
 .blog-footer {
     padding: 1rem 0.8rem;
     border-top: 1px solid var(--uri-gray);
     position: absolute;
     bottom: 0;
     width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.blog-footer>img {
+  border-radius: 50%;
+}
+
+.blog-footer>div {
+  font-size: var(--uri-avg-fsz);
+  color: var(--uri-gray);
 }
 
 .author-info {
