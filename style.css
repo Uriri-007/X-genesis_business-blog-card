@@ -9,21 +9,26 @@
   --uri-trans-dk: #111729;
   --uri-gray: #4a5567;
   --uri-avg-fsz: 16px;
+  --uri-lg-fsz: 24px;
+  --uri-sm-fsz: 14px;
+  --uri-head-ft: 'Poppins', sans-serif;
+  --uri-body-ft: 'Lato', sans-serif;
 }
 
 body {
-  height: 100vh;
+  height: max(100vh, 600px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   background-color: var(--uri-trans-white);
+  font-family: var(--uri-body-ft);
 }
 
 .container {
-    width: 280px;
-    height: 440px;
+    width: 300px;
+    height: 460px;
     border-radius: 1rem;
     position: relative;
     background-color: #fff;
@@ -53,6 +58,9 @@ h2, h3 {
 
 .container>h2 {
     margin: 20px 0.8rem 0 0.8rem;
+    font-family: var(--uri-head-ft);
+    font-size: var(--uri-lg-fsz);
+    font-weight: 500;
 }
 
 .container>p {
@@ -61,8 +69,8 @@ h2, h3 {
 
 .blog-para {
   font-size: var(--uri-avg-fsz);
-  margin-top: 2ch;
   color: var(--uri-gray);
+  margin-top: 1c;
 }
 
 .blog-footer {
@@ -81,8 +89,13 @@ h2, h3 {
 }
 
 .blog-footer>div {
-  font-size: var(--uri-avg-fsz);
+  font-size: var(--uri-sm-fsz);
   color: var(--uri-gray);
+}
+
+.blog-footer h3 {
+  font-size: var(--uri-avg-fsz);
+  font-weight: 500;
 }
 
 .author-info {
